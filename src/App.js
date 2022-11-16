@@ -21,10 +21,7 @@ function App() {
 
   return (
     <div className="App">
-        <div>
-            <input type="date" value={date} onChange={(e) => setDate(e.target.value)}/>
-        </div>
-        <Card data={data} />
+        <Card data={data} date={date} setDate={setDate} />
     </div>
   );
 }

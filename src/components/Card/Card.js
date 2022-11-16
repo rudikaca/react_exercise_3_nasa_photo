@@ -1,6 +1,6 @@
 import React from "react";
 
-const Card = ({ data }) => {
+const Card = ({ data, setDate, date }) => {
 
     return (
         <>
@@ -11,6 +11,9 @@ const Card = ({ data }) => {
                 </div>
                 <div style={{display: 'flex', justifyContent: 'center', gap: '50px'}}>
                     <strong>date:</strong> {data.date}
+                    <div>
+                        <input type="date" value={date} onChange={(e) => setDate(e.target.value)}/>
+                    </div>
                 </div>
                 <div>
                     <strong>Explanation:</strong> {data.explanation}
